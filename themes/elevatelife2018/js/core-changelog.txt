@@ -1,0 +1,13 @@
+==Animation update===
+custom.min.js
+$content.slideToggle(700,function() to $content.slideToggle(2,function()
+find(".et_pb_toggle_content").slideToggle(700,function() TO find(".et_pb_toggle_content").slideToggle(2,function()
+
+
+Top menu animation:
+
+$closest_submenu.slideToggle(2,"easeInOutCubic")):($closest_submenu.slideToggle(2,"easeInOutCubic")
+
+FROM
+
+$closest_submenu.slideToggle(700,"easeInOutCubic")):($closest_submenu.slideToggle(700,"easeInOutCubic")

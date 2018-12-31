@@ -1,0 +1,16 @@
+.lsi_recent_recording_container {float: left;width: 100%;}
+.single_recording_mdl { float: left; margin-bottom: 20px; margin-top:5px; width: 100%; }
+.lsi_load_more_recds { float: left;width: 100%; } 
+.recoding_listing_tbl { float:left;width:100%;margin-top: 30px;margin-bottom: 30px;  }
+.listing_ct_protedtedarea{ float:left;width:100%; }
+.recoding_listing_tbl th {  border: 1px solid #ccc !important; background:#ccc !important;}
+.recoding_listing_tbl td {  border: 1px solid #ccc !important;}
+.singlelsipost{ margin-top:30px; }
+.medifielsp3lsi_abovecls{ float:left;width:100%;margin-top: 30px;margin-bottom: 30px;  }
+#lsidwnload{ background:#e9671b none repeat scroll 0 0; color:#fff !important; margin-top:50px; }
+.table_recoding_audlisting {float: left;margin-top: 15px;width: 100%;}
+.show_users_address_details_lsi
+{
+	
+}
+

@@ -1,0 +1,1 @@
+[26-Dec-2014 10:09:55 America/Chicago] PHP Fatal error:  Class 'WP_UnitTestCase' not found in /home/oskydev/public_html/blackopsusa/wp-content/themes/RMThemeApollo/CMB/tests/phpunit/tests/CMB_Core_Test.php on line 3

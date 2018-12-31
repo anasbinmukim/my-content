@@ -1,0 +1,20 @@
+/*
+ Theme Name:   Elevate Community Main Site Theme
+ Description:  A child theme for the main site on the network.  
+ Author:       CedarWaters
+ Author URI:   http://cedarwaters.com
+ Template:     Divi
+ Version:      1.0.0
+*/
+
+/* Center the Footer Credits */
+#footer-info { width: 100%; margin:0 auto; text-align: center !important; }
+@media only screen and (min-width: 980px) { 
+    #footer-bottom .et-social-icons { margin-bottom:-28px; } 
+}
+
+/* Hide top Menu */
+.et_header_style_centered #main-header div#et-top-navigation {
+    display: none;
+    }
+    

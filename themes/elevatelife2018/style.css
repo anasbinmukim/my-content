@@ -1,0 +1,88 @@
+/*
+ Theme Name:   Elevate Life 2018
+ Description:  A child theme for the main site on the network.
+ Author:       CedarWaters
+ Author URI:   http://cedarwaters.com
+ Template:     Divi
+ Version:      1.0.0
+*/
+
+@font-face {
+  font-family: 'AvenirNextLTPro-Regular';
+  src: url('avenir-font/AvenirNextLTPro-Regular.eot?#iefix') format('embedded-opentype'),  url('avenir-font/AvenirNextLTPro-Regular.otf')  format('opentype'),
+	     url('avenir-font/AvenirNextLTPro-Regular.woff') format('woff'), url('avenir-font/AvenirNextLTPro-Regular.ttf')  format('truetype'), url('avenir-font/AvenirNextLTPro-Regular.svg#AvenirNextLTPro-Regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'MillerDisplay-Roman';
+  src: url('miller-font/MillerDisplay-Roman.eot?#iefix') format('embedded-opentype'),  url('miller-font/MillerDisplay-Roman.otf')  format('opentype'),
+	     url('miller-font/MillerDisplay-Roman.woff') format('woff'), url('miller-font/MillerDisplay-Roman.ttf')  format('truetype'), url('miller-font/MillerDisplay-Roman.svg#MillerDisplay-Roman') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'AvenirNextLTPro-Medium';
+  src: url('avenir-font/AvenirNextLTPro-Medium.eot?#iefix') format('embedded-opentype'),  url('avenir-font/AvenirNextLTPro-Medium.otf')  format('opentype'),
+	     url('avenir-font/AvenirNextLTPro-Medium.woff') format('woff'), url('avenir-font/AvenirNextLTPro-Medium.ttf')  format('truetype'), url('avenir-font/AvenirNextLTPro-Medium.svg#AvenirNextLTPro-Medium') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'AvenirNextLTPro-Bold';
+  src: url('avenir-font/AvenirNextLTPro-Bold.eot?#iefix') format('embedded-opentype'),  url('avenir-font/AvenirNextLTPro-Bold.otf')  format('opentype'),
+	     url('avenir-font/AvenirNextLTPro-Bold.woff') format('woff'), url('avenir-font/AvenirNextLTPro-Bold.ttf')  format('truetype'), url('avenir-font/AvenirNextLTPro-Bold.svg#AvenirNextLTPro-Bold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'AvenirNextLTPro-Heavy';
+  src: url('avenir-font/AvenirNextLTPro-Heavy.eot?#iefix') format('embedded-opentype'),  url('avenir-font/AvenirNextLTPro-Heavy.otf')  format('opentype'),
+	     url('avenir-font/AvenirNextLTPro-Heavy.woff') format('woff'), url('avenir-font/AvenirNextLTPro-Heavy.ttf')  format('truetype'), url('avenir-font/AvenirNextLTPro-Heavy.svg#AvenirNextLTPro-Heavy') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.elevate-transparent-header #main-header{
+    background-color: transparent;
+}
+.elevate-transparent-header #top-menu li.current-menu-ancestor>a{ color:#fff !important;}
+
+@media only screen and (max-width: 767px){
+.elevate-transparent-header .et_pb_section_0 {padding-top:50px !important;}
+}
+
+.watch_live_notification_section{ width: 100%; height: auto; text-align: center; background: #00b3f9; color: #FFFFFF; }
+.watch_live_notification_section .watch_live_notification{ text-align: center; }
+.watch_live_notification a{ color: #FFFFFF; padding: 10px; display: block; font-family: 'AvenirNextLTPro-Bold'; }
+
+.cate_header_section {background: #1c1c1c!important; text-align: center; }
+.cate_header_section h1{ color: #FFFFFF; text-align: center; padding-top: 30px; padding-bottom: 70px; }
+
+.team_description{ border-bottom: 2px solid #dadada; padding-bottom: 20px; margin-bottom: 20px; }
+.et_section_team_grid_view{ width: 100%; }
+.et_section_team_grid_view .team_grid{ list-style: none; }
+.et_section_team_grid_view .team_grid li{
+  width: 28.353%;
+  margin-right: 7.47%;
+  float: left;
+  list-style: none;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.et_section_team_grid_view .team_grid li:nth-child(3n){ margin-right: 0; }
+.et_section_team_grid_view .member_photo{
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+.et_section_team_grid_view .member_photo img{
+    border-radius: 50% 50% 50% 50%;
+}
+.et_section_team_grid_view .team_grid li h3{ font-size: 22px; }
+.et_section_team_grid_view .team_grid li p.et_pb_member_position{ color: #3d3d3d!important; margin-bottom: 20px; }

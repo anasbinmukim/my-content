@@ -1,0 +1,4 @@
+[06-Dec-2014 11:51:01 America/Chicago] PHP Fatal error:  Call to undefined function add_filter() in /home/oskydev/public_html/blackopsusa/wp-content/themes/RMThemeApollo/CMB/example-functions.php on line 11
+[06-Dec-2014 23:02:10 America/Chicago] PHP Fatal error:  Call to undefined function apply_filters() in /home/oskydev/public_html/blackopsusa/wp-content/themes/RMThemeApollo/CMB/init.php on line 41
+[26-Dec-2014 09:54:34 America/Chicago] PHP Fatal error:  Call to undefined function apply_filters() in /home/oskydev/public_html/blackopsusa/wp-content/themes/RMThemeApollo/CMB/init.php on line 41
+[26-Dec-2014 09:56:12 America/Chicago] PHP Fatal error:  Call to undefined function add_filter() in /home/oskydev/public_html/blackopsusa/wp-content/themes/RMThemeApollo/CMB/example-functions.php on line 11

@@ -1,0 +1,308 @@
+<?php
+
+/******
+ * @
+ * @Team grid view called from shortcode function
+ * @Can be override from child theme
+ * @
+ *****/
+
+if (!function_exists('get_rmtheme_team_gird_view')) {
+
+    function get_rmtheme_team_gird_view($number_of_member, $member_per_row, $ui_animation, $read_more, $include, $exclude) {
+
+		global $rmtopt;
+
+		wp_reset_query();		
+
+		if($include){
+
+			$include = explode(',', $include);
+
+			$args = array(
+
+				'post_type' => 'rm_team',
+
+				'orderby' => 'menu_order',
+
+				'post__in' => $include,
+
+				'order' => 'ASC',
+
+				'posts_per_page' => $number_of_member
+
+			);
+
+		}elseif($exclude){
+
+			$exclude = explode(',', $exclude);
+
+			$args = array(
+
+				'post_type' => 'rm_team',
+
+				'orderby' => 'menu_order',
+
+				'post__not_in' => $exclude, 
+
+				'order' => 'ASC',
+
+				'posts_per_page' => $number_of_member
+
+			);
+
+		}else{
+
+			$args = array(
+
+				'post_type' => 'rm_team',
+
+				'orderby' => 'menu_order', 
+
+				'order' => 'ASC',
+
+				'posts_per_page' => $number_of_member
+
+			);
+
+		}		
+
+		$team_posts = new WP_Query($args);	
+
+		$output_list = '';		
+
+		$counter = 1;
+
+		$ui_animation = rm_to_boolean($ui_animation);
+
+		$read_more = rm_to_boolean($read_more);	
+
+	?>
+
+			<?php if($team_posts->have_posts()){ ?>
+
+        	<?php while($team_posts->have_posts()): $team_posts->the_post(); ?>
+
+			<?php                
+
+                $post_id = get_the_ID();    
+
+                $post_title = get_the_title($post_id);
+
+                $post_link = get_permalink($post_id);	
+
+				$ui_animation_display = '';
+
+				$ui_animation_type = '';
+
+				$ui_animation_delay = '';
+
+				if($ui_animation){
+
+					$animation_type = $rmtopt['blog_ui_animation_type'];	
+
+					$animation_delay = $rmtopt['blog_ui_animation_delay'];				
+
+					$ui_animation_display = ' animated ';	
+
+					$ui_animation_type = 'data-animation_type="'.$animation_type.'"';
+
+					$ui_animation_delay = 'data-animation_duration="'.$animation_delay.'"';				
+
+				}			
+
+				$social_list = '';
+
+				$social_list_top = '';
+
+				$social_list_bottom = '';
+
+				if(get_post_meta($post_id, '_rmt_member_facebook', true))
+
+					$social_list .= '<a class="facebook" href="' . get_post_meta($post_id, '_rmt_member_facebook', true) . '" title="Facebook"><i class="fa fa-facebook"></i></a>';
+
+				if(get_post_meta($post_id, '_rmt_member_twitter', true))
+
+					$social_list .= '<a class="twitter" href="' . get_post_meta($post_id, '_rmt_member_twitter', true) . '" title="twitter"><i class="fa fa-twitter"></i></a>';				
+
+				if(get_post_meta($post_id, '_rmt_member_linkedin', true))
+
+					$social_list .= '<a class="linkedin" href="' . get_post_meta($post_id, '_rmt_member_linkedin', true) . '" title="Linkedin"><i class="fa fa-linkedin"></i></a>';						
+
+				if(get_post_meta($post_id, '_rmt_member_google_plus', true))
+
+					$social_list .= '<a class="google_plus" href="' . get_post_meta($post_id, '_rmt_member_google_plus', true) . '" title="Google plus"><i class="fa fa-google-plus"></i></a>';
+
+				if(get_post_meta($post_id, '_rmt_member_pinterest', true))
+
+					$social_list .= '<a class="pinterest" href="' . get_post_meta($post_id, '_rmt_member_pinterest', true) . '" title="pinterest"><i class="fa fa-pinterest"></i></a>';
+
+				if(get_post_meta($post_id, '_rmt_member_youtube', true))
+
+					$social_list .= '<a class="youtube" href="' . get_post_meta($post_id, '_rmt_member_youtube', true) . '" title="youtube"><i class="fa fa-youtube"></i></a>';
+
+				
+
+				$social_list_top = $social_list;
+
+				$social_list_bottom = $social_list;
+
+				$responsive_class = '';
+
+				if($member_per_row >= 2){ 					
+
+					$responsive_class = rm_resonsive_content_col_class($member_per_row);					
+
+					if(($counter % $member_per_row) == 0){
+
+					//last col
+
+					$responsive_class = rm_resonsive_content_col_class($member_per_row, true);
+
+					}				
+
+				}
+
+                if (has_post_thumbnail()) {
+
+                    $thumbnail_source = rm_get_thumbnail_source(array('image_size' => 'large'));
+
+                    $thumbnail_image = rm_get_thumbnail(array('image_size' => 'large'));
+
+                    if (!empty($thumbnail_image)) {
+
+                        $thumbnail_exists = true;                        
+
+                        $output = '';						
+
+						$readmore_class = '';
+
+						if($read_more){
+
+							$readmore_class = 'readmore_yes';
+
+						}else{
+
+							$readmore_class = 'readmore_no';
+
+						}
+
+                        $output .= "\n" . '<div class="col-xs-12 col-md-2 col-sm-6 '. $readmore_class .' ">';
+
+                        $output .= '<div class="' . join(' ', get_post_class('our_team_grid display_style_flat')) . '">';
+
+                        $output .= '<div class="image-area">';
+
+                        $output .= $thumbnail_image;
+
+                        $image_info = '';
+
+						$image_info_bottom = '';
+
+                        $image_info .= '<div class="image-info">';
+
+						if($read_more){							
+
+							$image_info .= '<div class="image-info-buttons">';
+
+							$image_info .= "\n" . '<a class="lightbox-link fa fa-chain fa-2x" title="" href="'.$post_link.'"></a>';
+
+							$image_info .= '</div>';							
+
+						}	
+
+						$image_info .= "\n" . '<div class="social_share_list list_on_image_info">';
+
+						$image_info .= $social_list_top;
+
+						$image_info .= '</div><!-- .social_share_list -->';						
+
+                        $image_info .= '</div>';
+
+                        $output .= $image_info;
+
+                        $output .= '</div>'; // end of image-area						
+
+						$output .= '<div class="member_detail_info">';
+
+						$output_social_list_beside_title = '';
+
+						$output_social_list_beside_title .= "\n" . '<div class="social_share_list list_beside_title">';
+
+						$output_social_list_beside_title .= $social_list_top;
+
+						$output_social_list_beside_title .= '</div><!-- .social_share_list -->';	
+
+						if($read_more)
+
+							$output .= '<div class="member_title"><a href="'.$post_link.'">' . $post_title . '</a> '.$output_social_list_beside_title.' </div>';
+
+						else
+
+							$output .= '<div class="member_title">' . $post_title . $output_social_list_beside_title.' </div>';							
+
+						if(get_post_meta($post_id, '_rmt_member_designation', true))
+
+							$image_info_bottom .= '<span class="member_designation designation_top">' . get_post_meta($post_id, '_rmt_member_designation', true) . '</span>';
+
+						if($read_more){
+
+							$image_info_bottom .= '<div class="short_desc">'.get_the_excerpt();
+
+							$read_more_text = __('Read more', 'RMTheme');
+
+							$image_info_bottom .= '<span class="readmore"><a href="'.$post_link.'">'.apply_filters( 'team_read_more', $read_more_text ).'</a></span>';
+
+							$image_info_bottom .= '</div>';
+
+						}else{	
+
+							$image_info_bottom .= '<div class="short_desc">'.get_the_content().'</div>';
+
+						}
+
+						$output .= $image_info_bottom;						
+
+						if(get_post_meta($post_id, '_rmt_member_designation', true))
+
+							$output .= '<span class="member_designation designation_bottom">' . get_post_meta($post_id, '_rmt_member_designation', true) . '</span>';
+
+						$output .= "\n" . '<div class="social_share_list list_bottom">';
+
+						$output .= $social_list_bottom;
+
+						$output .= '</div><!-- .social_share_list -->';						
+
+						$output .= '</div><!-- .member_detail_info -->';
+
+                        $output .= '</div><!-- .hentry -->';
+
+                        $output .= '</div>';	
+
+						if($member_per_row >= 2){ 
+
+							if(($counter % $member_per_row) == 0){$output .= '<div class="clear"></div>';}
+
+						}	
+
+                       $output_list .= $output;
+
+                    }
+
+                }								
+
+            ?>
+
+			<?php $counter++; endwhile; ?>	
+
+            <?php } ?>	
+
+	<?php
+
+		wp_reset_query();
+
+		return $output_list;
+
+	}
+
+}
