@@ -1,0 +1,2 @@
+/*CSS for timeshheet admin panel*/
+tr.timesheet_status-pending td, tr.timesheet_status-pending td a{ color:#FF0000; }

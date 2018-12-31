@@ -1,0 +1,331 @@
+/*
+	Theme Name: DiviChildVSpatial
+	Description: DiviChildVSpatial is a child theme of DiviTheme
+	Version: 3.0.34
+	Description: A clean, responsive wordpress theme child theme
+	Author: <a href="http://cedarwaters.com/">CedarWaters</a>
+	Author URI: http://cedarwaters.com/
+	Template: Divi
+
+-------------------------------------------------------------------------*/
+
+/*____Default Style_____*/
+a:hover{ opacity: 1 !important; -webkit-opacity: 1 !important; }
+.et_pb_widget{ float: none; }
+
+
+/*______Header_____*/
+nav#top-menu-nav{ padding-bottom: 10px; }
+.et_header_style_left #et-top-navigation nav>ul>li>a{ padding-bottom: 14px !important; }
+#et-top-navigation nav>ul>li.higlited_menu_item { border: 2px solid #6acff6; border-radius: 3px; padding: 11px 22px 0 22px!important; }
+.et_pb_button.btn_download,
+.et_pb_button.btn_learnmore {
+    background: #00C3F3;
+    display: inline-block;
+    max-width: 250px;
+    border-radius: 0;
+    color: #fff !important;
+    width: 100%;
+    text-transform: uppercase;
+    padding-top: 12px !important;
+    padding-bottom: 12px !important;
+    font-size: 22px;
+}
+ .et_pb_button.btn_learnmore{ background: none;	}
+.et_pb_button.btn_learnmore:hover{  background: #00C3F3; }
+.header_social_list {
+    float: right;
+    position: relative;
+    margin-left: 28px;
+}
+.header_social_list a { padding: 10px; }
+.header_social_list .fa { font-size: 20px; color: #FFF; padding: 10px 0; }
+
+
+/*______Footer________*/
+.et_pb_gutters1.et_pb_footer_columns4 .footer-widget { width: 19.2%; margin-right: 1%; }
+.et_pb_gutters1.et_pb_footer_columns4 .footer-widget:last-child{ margin-right: 0; }
+#footer-widgets { padding: 30px 0; }
+.footer_social_list { margin-top: 10px; }
+.footer_social_list a { display: inline-block; margin-right: 5px; }
+#footer-bottom .et_column_last { padding: 7px 0;  color: #FFF;  font-size: 12px; }
+.footer_link a { color: #FFF; }
+.footer_link { border-right: 1px solid #666874; padding-right: 20px; margin-right: 25px; }
+
+
+
+
+/*___Footer Subscribe Form______*/
+.subscription_form_footer {
+    max-width: 525px;
+    margin: auto;
+    width: 100%;
+}
+.intercom-container{ border-bottom:none !important;}
+.footer_subscription_form_wrap {
+    margin-top: 12px;
+    max-width: 525px;
+    min-height: 100px;
+    position: absolute;
+    width: 100%;
+    display: none;
+}
+.subscription_form_footer .intercom_email {
+    background: none;
+    border: 2px solid #f1f3f4 !important;
+    padding: 10px 15px;
+    color: #FFF !important;
+    height: 40px !important;
+    font-style: italic;
+    font-size: 18px;
+}
+.subscription_form_footer .intercom_email_submit {
+    background: url(images/ion_submit.png) no-repeat center;
+    width: 70px;
+    height: 40px !important;
+    border: 2px solid #FFF;
+    font-size: 0;
+    cursor: pointer;
+}
+body #page-container .stay_connected_footer .btn_stay_updated {
+    color: #ffffff !important;
+    border-width: 5px !important;
+    border-color: #6acff6;
+    border-radius: 100px;
+    font-size: 28px;
+	letter-spacing: 3px !important;
+    font-family: 'Open Sans' !important;
+    font-weight: 700 !important;
+	padding-top:9px !important;
+	padding-bottom:9px !important;
+}
+
+body #page-container .btn_stay_updated.et_pb_button:after {
+    color: #6acff6;
+    line-height: 1.7em;
+    font-size: 28px !important;
+}
+body #page-container .btn_stay_updated.et_pb_button:hover:after{ margin-left:7px;}
+body #page-container .btn_stay_updated.et_pb_button:hover{ background:none !important;}
+
+.footer_subscription_form_wrap  *::-webkit-input-placeholder {
+    color: #fff; opacity:1;
+}
+.footer_subscription_form_wrap  *:-moz-placeholder {
+    /* FF 4-18 */
+    color: #fff; opacity:1;
+}
+
+/*_____QuoTabel archive_____*/
+.quote_slider_archive{}
+ul.quote_archive li { width: 90%; margin-bottom: 50px; }
+ul.quote_archive .quote_description { font-size: 20px; margin-bottom: 10px; margin-top: 40px; }
+ul.quote_archive, ul.quote_archive li{ list-style: none; }
+ul.quote_archive .quote_social_icon a .fa{ color: #FFFFFF; }
+ul.quote_archive .author_name { text-align: right; }
+ul.quote_archive .author_designation { text-align: right; }
+ul.quote_archive .quote_description_wrap{ background-size: cover; }
+
+/*_____QuoTabel_____*/
+.quote_description_wrap{
+background:url('/wp-content/themes/DiviChildVspatial/image-custom/quote-background.jpg') no-repeat top center;
+background-size:100%;
+padding:30px 30px 20px;
+text-align:center; color:#ffffff;
+min-height:180px;
+ }
+.quote_description {
+    font-size: 14px;
+    line-height: 1.4em;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+.quote_description a { color: #ffffff; }
+.author_name{
+font-weight:bold;
+color:#ffffff;
+font-size:17px;
+letter-spacing: 1px;
+}
+.author_designation{ font-style:italic; color:#ffffff; font-weight:300; font-size:14px;}
+.quote_social_icon { text-align:right; margin-top:10px;}
+.quote_social_icon a{
+    display: inline-block;
+    background: #36C3F0;
+    height: 30px;
+    width: 30px;
+    line-height:30px;
+    text-align: center;
+    border-radius: 100%;
+    color: #000;
+    margin-left: 6px;
+}
+
+.bx-controls-direction a{ position: absolute; top:35%; width:40px; height:40px; }
+.bx-controls-direction a.bx-prev{ background:url('image-custom/left_arrow.png') no-repeat top center;  left:-50px;
+}
+.bx-controls-direction a.bx-next{ background:url('image-custom/right_arrow.png') no-repeat top center; right:-50px; }
+.et_section_quotes { height: 230px; overflow: hidden; }
+.et_section_quotes ul li{width:33%; }
+.et_section_quotes ul{ paddin:0 !important;}
+.bx-wrapper{ margin:0 auto;}
+
+/*_____Recent News_____*/
+.recent_news_wrap ul li{ position: relative;}
+.news_overlay_wrap{
+position:absolute;
+bottom:0;
+padding: 15px 15px 25px;
+color:#ffffff;
+text-shadow:1px 1px 2px #333;
+}
+.recent_news_wrap a.recent_thumb:after{
+content:"";
+background:rgba(0,0,0,0.5);
+height:100%;
+width:100%;
+left:0;
+top:0;
+position: absolute;
+}
+.news_date{ font-style:italic; font-weight:600;}
+.recent_news_wrap a.recent_thumb img{ margin-bottom:-7px; }
+.news_title {
+    color: #ffffff;
+    font-size: 17px;
+    text-transform: uppercase;
+    line-height: 1.3em;
+    font-weight:600;
+ }
+
+.recent_news_wrap { height: 250px; overflow: hidden; }
+.recent_news_wrap ul li{ width:48%; }
+
+
+
+/*____Blog Page_____*/
+.socil_list > li { display: inline-block; }
+.header_blog_section .socil_list { float: left; margin-right: 30px; margin-top: 22px; }
+.socil_list li a {
+    border: 3px solid #ffffff;
+    border-radius: 31px;
+    display: inline-block !important;
+    height: 45px;
+    padding-top: 3px;
+    text-align: center;
+    width: 45px;
+    margin: 0 6px;
+}
+.socil_list .fa { color: #FFF; font-weight: 600; padding-top: 7px; font-size: 20px; }
+.subscribe_button_wrapper { float: left; position: relative; }
+#subscribe_btn_blog {
+    padding-top: 6px;
+    background: #b2d437;
+    width: 150px;
+    height: 40px;
+    margin-top: 24px;
+    text-align: center;
+    display: block;
+    color: #FFF;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 600;
+    float: left;
+}
+.subscription_form_wrap {
+    width: 497px;
+    position: absolute;
+    left: 0;
+    top: 64px;
+	display:none;
+}
+.header_blog_section_wini .et_pb_widget{ width:100% !important;}
+.header_blog_section img {
+    float: left;
+    margin-right: 30px;
+    margin-bottom: 30px;
+    margin-top: -14px;
+}
+.subscription_form_wrap .intercom_email {
+    background: none;
+    border: 2px solid #f1f3f4 !important;
+    padding: 10px 15px;
+    color: #FFF !important;
+    height: 40px !important;
+    font-style: italic;
+    font-size: 18px;
+}
+.subscription_form_wrap .intercom_email_submit {
+    background: url(images/ion_submit.png) no-repeat center;
+    width: 70px;
+    height: 40px !important;
+    border: 2px solid #FFF;
+    font-size: 0;
+    cursor: pointer;
+}
+
+/*_____Single Post_____*/
+#sidebar h3 {  border-bottom: 1px solid #edf3f7;  margin-bottom: 30px; }
+#sidebar .et_pb_widget a { color: #696970; font-size: 12px; font-weight: 600; line-height: 18px; }
+#sidebar h4.widgettitle, .screen-reader-text { color: #494951; font-weight: 700; font-size: 20px; }
+#sidebar #searchsubmit { background: #c3cad4 url(images/search.png) no-repeat center;  font-size: 0; width: 50px;}
+.gform_button.button {
+    background-color: #6ACFF6;
+    border: none;
+    color: #FFF;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family: Montserrat;
+    font-size: 18px;
+    cursor: pointer;
+    font-weight: 600;
+}
+.gform_button.button:hover { background-color: #00c2f3; }
+.et_pb_gutters1 .blog_header_wrap  .et_pb_column .et_pb_widget:nth-child(n){ width: 100% !important; float: none; }
+
+
+
+/*_______Responsive Style__________*/
+
+@media screen and (min-width:980px){
+    .et_pb_gutters1.et_right_sidebar #left-area { padding-right: 0; width: 73%; }
+}
+
+@media screen and (min-width: 768px){
+	.et_pb_button.btn_download{ margin-right: 20px; }
+}
+
+@media screen and (max-width:980px){
+    .et_section_our_service .et_pb_column { width: 33.33%!important; }
+    .subscription_form_wrap { width: 300px; }
+    .header_social_list{ float: left; margin: 0 15px 0  0;}
+    .et_pb_section.blog_header_wrap .et_pb_row{ max-width: 490px !important;  }
+}
+
+@media screen and  (min-width: 768px) and (max-width: 980px) {
+.et_pb_gutters1 .footer-widget:nth-child(n) { width: 31%!important;  margin: 0 2% 5% 0!important; }
+.et_pb_gutters1 .footer-widget:nth-child(3n) { margin-right: 0!important; }
+.et_pb_gutters1 .footer-widget:nth-child(3n+1) { clear: both!important; }
+}
+
+@media screen and (max-width: 768px){
+	.et_pb_button.btn_download{  display: block; margin: 0 auto 20px; 	}
+    .bx-controls-direction a.bx-next {  right: -30px; }
+    .bx-controls-direction a.bx-prev { left: -30px; }
+    .news_title{ font-size: 14px; }
+    .footer-widget { text-align: center;     padding: 15px 0; }
+    .et_pb_button{ font-size: 16px; }
+    body #page-container .btn_stay_updated.et_pb_button:after { font-size: 18px !important; }
+    .header_blog_section .socil_list,
+    .subscribe_button_wrapper {  float: none;  margin: 0; text-align: center; }
+    .header_blog_section img { margin: 20px auto; display: table; float: none;}
+    .header_blog_section #subscribe_btn_blog { float: none;  margin: auto; text-align: center; }
+}
+
+@media screen and (max-width: 480px){
+    .header_social_list{ float: none; margin: 0; }
+    .header_social_list .fa{ font-size: 15px;}
+    .header_social_list a{ padding: 3px; }
+}

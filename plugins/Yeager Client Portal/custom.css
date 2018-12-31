@@ -1,0 +1,33 @@
+.addButton{    
+    background-image: url(plus-icon.png)!important;
+    background-size: contain;
+    padding: 15px !important;
+    background-color: transparent!important;
+    border: none!important;
+    cursor:pointer;
+}
+.removeButton{    
+    background-image: url(error-icon.png)!important;
+    background-size: contain;
+    padding: 12px !important;
+    background-color: transparent!important;
+    border: none!important;
+    cursor:pointer;
+
+}
+
+#clientPortal .form-group{
+    margin-top:10px;
+}
+.page .cls-sub_title,.page .cls-title_header{display:none;}
+
+.page #clientPortal .form-group {
+    clear: both;
+    height: 60px;
+}
+.page-template-default #clientPortal th {
+   max-width: 100% !important;
+}
+.page-template-default #clientPortal td {
+   max-width: 100% !important;
+}

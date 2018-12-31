@@ -1,0 +1,32 @@
+.wp-admin.post-type-lease .postbox-container #normal-sortables > div.postbox {
+
+}
+
+._yl_available_yes {
+	color: #7fcc6a;
+	font-size: 30px;
+}
+
+._yl_available_no {
+	color: #e39090;
+	font-size: 30px;
+}
+
+._yl_ms_span {
+	display: inline-block;
+	width: 80px;
+}
+
+.wp-admin.post-type-sa_invoice td.title.column-title,
+.wp-admin.post-type-sa_invoice th.column-title {
+	display: none!important;
+}
+
+.wp-admin.post-type-sa_invoice th.column-creator {
+	width: 50px;
+    font-size: 10px;
+}
+.wp-admin.post-type-sa_invoice td.column-creator {
+	text-align: center;
+	color: red;
+}

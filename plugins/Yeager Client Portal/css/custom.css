@@ -1,0 +1,75 @@
+.addButton{    
+    background-image: url(plus-icon.png)!important;
+    background-size: contain;
+    padding: 15px !important;
+    background-color: transparent!important;
+    border: none!important;
+    cursor:pointer;
+}
+.removeButton{    
+    background-image: url(error-icon.png)!important;
+    background-size: contain;
+    padding: 12px !important;
+    background-color: transparent!important;
+    border: none!important;
+    cursor:pointer;
+
+}
+
+#clientPortal .form-group{
+    margin-top:10px;
+}
+.page .cls-sub_title,.page .cls-title_header{display:none;}
+
+.page #clientPortal .form-group {
+    clear: both;
+    height: 60px;
+}
+.wp-editor-container{border: 1px solid rgb(187, 187, 187) !important;}
+.cls-pagination ul.page-numbers {
+    list-style: none;
+    margin: 0;
+}
+
+.cls-pagination .page-numbers:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+
+.cls-pagination ul.page-numbers li {
+    display: block;
+    float: left;
+    margin: 0 4px 4px 0;
+    text-align: center;
+}
+
+.cls-pagination .page-numbers a,
+.cls-pagination .page-numbers span {
+    line-height: 1.6em;
+    display: block;
+    padding: 0 6px;
+    height: 18px;
+    line-height: 18px;
+    font-size: 12px;
+    text-decoration: none;
+    font-weight: 400;
+    cursor: pointer;
+    border: 1px solid #ddd;
+    color: #888;
+}
+
+.cls-pagination .page-numbers a span { padding: 0 }
+
+.cls-pagination .page-numbers a:hover,
+.cls-pagination .page-numbers.current,
+.cls-pagination .page-numbers.current:hover {
+    color: #000;
+    background: #f7f7f7;
+    text-decoration: none;
+}
+
+.cls-pagination .page-numbers:hover { text-decoration: none }
